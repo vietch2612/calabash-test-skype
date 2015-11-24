@@ -12,20 +12,22 @@ Và cài đặt <code>PATH</code>:
 <pre><code>export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools</pre></code>
 
 ## Cài đặt Ruby.  
-
 Đầu tiên là máy Mac của bạn phải có `Homebrew`, nếu chưa có thì bạn phải cài đặt trước khi cài đặt Ruby.  
-<pre></code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</pre></code>  
-  
+<pre><code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></pre>  
   
 Tiếp theo là cài đặt Ruby, các bạn hãy làm theo các bước như bên dưới  
-<pre></code>brew install rbenv ruby-build
+  
+<pre><code>brew install rbenv ruby-build
 
-# Add rbenv to bash so that it loads every time you open a terminal
+# Bước này để rbenv được load mỗi khi bạn mở terminal
 echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
 source ~/.bash_profile
 
-# Install Ruby
+# Cài đặt ruby
 rbenv install 2.2.3
 rbenv global 2.2.3
+
+# Kiểm tra 
 ruby -v </code></pre>
+
 ##Cài đặt gem calabash-android.
