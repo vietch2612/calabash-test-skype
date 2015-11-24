@@ -7,7 +7,8 @@ Sau khi tải về máy và giải nén, chúng ta phải cấu hình biến mô
 Cài đặt <code>ANDROID_HOME</code> bằng cách gõ command vào terminal  
 <pre><code>export ANDROID_HOME=/path/to/your/android/sdk/folder</code></pre>  
 <code>/path/to/your/android/sdk/folder</code> là đường dẫn tới folder lưu SDK của bạn, chẳng hạn như của mình sẽ là <code>/User/hoaiviet/Documents/android-sdk</code>  
-	Và cài đặt <code>PATH</code>:
+  
+Và cài đặt <code>PATH</code>:
 <pre><code>export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools</pre></code>
 	
 2. Cài đặt Ruby.  
