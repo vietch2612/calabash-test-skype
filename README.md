@@ -1,4 +1,4 @@
-# Hướng dẫn viết Automation Test cho Android app sử dụng Calabash-Cucumber
+# Automation Test cho Android app sử dụng Calabash-Cucumber
 ## Cài đặt Android SDK. 
 Tải và cài đặt Android SDK dành cho Mac OS tại [Android SDK Stand alone download](http://developer.android.com/sdk/index.html#Other)
     ![android_sdk_for_macos](http://i.imgur.com/sm5eCyE.png)  
@@ -42,7 +42,7 @@ Sau khi đã cài đặt xong Ruby thì chúng ta cần cài đặt gem Calabash
 gem install calabash-android
 ```
 
-## Bắt đầu Automation nào
+## Khởi tạo thư mục test
 Cáo thứ các bạn cần chuẩn bị là:  
 * Device android hoặc Emulator  
 * File APK của app bạn muốn test.  
@@ -60,7 +60,7 @@ Mở folder vừa tạo
 cd calabash-test-skype
 ```
 
-Tiếp theo chúng ta sẽ tạo gen folder test
+Tiếp theo chúng ta sẽ tạo generate ra folder test bằng command
 ```
 calabash-android gen
 ```
@@ -77,4 +77,25 @@ Bước tiếp theo, hãy copy file APK của app mình muốn test vào folder 
 ```
 calabash-android resign skype.apk
 ```
+
+## Viết scenario đầu tiên
+Bắt đầu chúng ta hãy mở file `my_fist.feature` bằng Sublime Text, chúng ta sẽ thấy như hình 
+
+![first_step](http://i.imgur.com/verAlLs.png)
+
+Đọc đến đây chắc các bạn cũng tự hỏi, làm sao để biết được viết các steps như nào mới là đúng? OK, tất cả các Steps mà Calabash đã defined sẵn ở đây, các bạn có thể dùng https://github.com/calabash/calabash-android/blob/master/ruby-gem/lib/calabash-android/canned_steps.md
+
+Nào quay lại với file feature, chúng ta hãy thử viết theo như bên dưới
+
+```
+//demo
+```
+
+## Run
+Xong rồi, chúng ta bắt đầu run thôi.
+
+```
+calabash-android run skype.apk
+```
+
 
