@@ -10,8 +10,9 @@ Cài đặt <code>ANDROID_HOME</code> bằng cách gõ command vào terminal
   
 Và cài đặt <code>PATH</code>:
 <pre><code>export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools</pre></code>
-	
-##Cài đặt Ruby.  
+
+## Cài đặt Ruby.  
+
 Đầu tiên là máy Mac của bạn phải có `Homebrew`, nếu chưa có thì bạn phải cài đặt trước khi cài đặt Ruby.  
 <pre></code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</pre></code>  
   
