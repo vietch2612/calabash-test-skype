@@ -123,4 +123,12 @@ Hãy xem devices và kết quả
 
 Ồ, bước 1,2 chúng ta đã chạy OK nhưng tới bước thì calabash báo là chúng ta chưa định nghĩa step này. OK giờ chúng ta sẽ định nghĩa nó. Trong folder test, chúng ta hãy mở file `calabash_steps.rb` trong folder `step_definitions` và thêm hàm như sau
 
+```
+Given(/^I enter my secret password into input fiend number (\d+)$/) do |arg1|
+  enter_text("android.widget.EditText index:#{index.to_i-1}", "password")
+end
+```
+
+Và bây giờ chúng ta run test lại lần nữa:
+
 
