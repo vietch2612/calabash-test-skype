@@ -121,7 +121,7 @@ calabash-android run skype.apk
 Hãy xem devices và kết quả 
 ![first_run](http://i.imgur.com/LuvPgK4.png)
 
-Ồ, bước 1,2 chúng ta đã chạy OK nhưng tới bước thì calabash báo là chúng ta chưa định nghĩa step này. OK giờ chúng ta sẽ định nghĩa nó. Trong folder test, chúng ta hãy mở file `calabash_steps.rb` trong folder `step_definitions` và thêm hàm như sau
+Ồ, bước 1,2 chúng ta đã chạy OK nhưng tới bước 3 thì calabash báo là chúng ta chưa định nghĩa step này. OK giờ chúng ta sẽ định nghĩa nó. Trong folder test, chúng ta hãy mở file `calabash_steps.rb` trong folder `step_definitions` và thêm hàm như sau để định nghĩa step trên
 
 ```
 Given(/^I enter my secret password into input fiend number (\d+)$/) do |arg1|
