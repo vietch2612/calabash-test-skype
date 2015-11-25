@@ -83,19 +83,44 @@ Bắt đầu chúng ta hãy mở file `my_fist.feature` bằng Sublime Text, ch�
 
 ![first_step](http://i.imgur.com/verAlLs.png)
 
-Đọc đến đây chắc các bạn cũng tự hỏi, làm sao để biết được viết các steps như nào mới là đúng? OK, tất cả các Steps mà Calabash đã defined sẵn ở đây, các bạn có thể dùng https://github.com/calabash/calabash-android/blob/master/ruby-gem/lib/calabash-android/canned_steps.md
+Đọc đến đây chắc các bạn cũng tự hỏi, làm sao để biết được viết các steps như nào mới là đúng? OK, tất cả các Steps mà Calabash đã defined sẵn ở đây, các bạn có thể xem ở đây: [canned_steps](https://github.com/calabash/calabash-android/blob/master/ruby-gem/lib/calabash-android/canned_steps.md)
 
-Nào quay lại với file feature, chúng ta hãy thử viết theo như bên dưới
+Nào quay lại với file feature, chúng ta hãy định nghĩa 1 scenario đơn giản cho chức năng đăng nhập bằng Skype name
 
 ```
-//demo
+Step 1: Nhấn button Skype Name
+Step 2: Điền tài khoản skype vào khung nhập thứ nhất
+Step 3: Điền mật khẩu vào khung nhập thứ hai
+Step 4: Nhấn button đăng nhập
+Step 5: Kết quả mong muốn là muốn thấy nút Add friends
 ```
 
-## Run
-Xong rồi, chúng ta bắt đầu run thôi.
+Xong rồi, chúng ta bắt đầu sửa file `my_first.feature` theo các step chúng ta đã define ở trên:
 
+```
+Feature: Login feature
+
+  Scenario: As a valid user I can log into my app
+    Given I press the "Skype Name" button
+    Given I enter "viet.ch2612" into input field number 1
+    Given I enter my secret password into input fiend number 2
+    When I press image button number 1
+    Then I should see "Add friend"
+```
+
+Bước cuối cùng là run test. Để chạy được trên devices thật thì các bạn nhớ cắm dây USB và bật USB Debugging lên nhé.
+Tốt nhất các bạn nên kiểm tra bằng câu lệnh
+```
+adb devices
+```
+
+OK bây giờ chúng ta hãy run thử
 ```
 calabash-android run skype.apk
 ```
+Hãy xem devices và kết quả 
+![first_run](http://i.imgur.com/LuvPgK4.png)
+
+Ồ, bước 1,2 chúng ta đã chạy OK nhưng tới bước thì calabash báo là chúng ta chưa định nghĩa step này. OK giờ chúng ta sẽ định nghĩa nó. Trong folder test, chúng ta hãy mở file `calabash_steps.rb` trong folder `step_definitions` và thêm hàm như sau
 
 
