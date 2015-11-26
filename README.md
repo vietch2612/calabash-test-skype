@@ -131,4 +131,74 @@ end
 
 Và bây giờ chúng ta run test lại lần nữa:
 
+`kết quả`
+
+## Test report?
+Các bạn sẽ tự hỏi, tất cả thông báo các steps pass và fail đều hiện lên trên command line như vậy thì lưu lại report kiểu gì phải không? Tất nhiên là Calabash có hỗ trợ lưu report dưới dạng file, và cụ thể là HTML và report cũng rất là "cool". 
+```
+calabash-android run skype.apk --format html --out <filename>.html
+```
+hoặc
+```
+calabash-android run skype.apk -f html -o <filename>.html
+```
+
+## Run cụ thể một feature nào đó?
+Đơn giản là bạn chỉ cần dẫn tới file feature đó là được
+```
+calabash-android run skype.apk feature/<filename>/html
+```
+
+## Run cụ thể một @tag nào đó?
+```
+calabash-android run skype.apk --tag @test
+```
+hoặc
+```
+calabash-android run skype.apk -t @test
+```
+
+## Reset (Clear app data) với tag @reset
+Các bạn chỉ cần thêm đoạn code sau vào file `feature/support/app_installation_hooks.rb` bên trong `Before`
+```
+scenario_tags = scenario.source_tag_names
+  if scenario_tags.include?("@reset")
+    clear_app_data
+  end
+```
+và hàm Before sau khi thêm mới của chúng ta sẽ có nội dung như sau:
+```
+Before do |scenario|
+  @scenario_is_outline = (scenario.class == Cucumber::Ast::OutlineTable::ExampleRow)
+  if @scenario_is_outline
+    scenario = scenario.scenario_outline
+  end
+
+  feature_name = scenario.feature.title
+  if FeatureNameMemory.feature_name != feature_name \
+      or ENV["RESET_BETWEEN_SCENARIOS"] == "1"
+    if ENV["RESET_BETWEEN_SCENARIOS"] == "1"
+      log "New scenario - reinstalling apps"
+    else
+      log "First scenario in feature - reinstalling apps"
+    end
+
+    uninstall_apps
+    install_app(ENV["TEST_APP_PATH"])
+    install_app(ENV["APP_PATH"])
+    FeatureNameMemory.feature_name = feature_name
+    FeatureNameMemory.invocation = 1
+  else
+    FeatureNameMemory.invocation += 1
+  end
+
+  scenario_tags = scenario.source_tag_names
+  if scenario_tags.include?("@reset")
+    clear_app_data
+  end
+end
+```
+
+
+
 
