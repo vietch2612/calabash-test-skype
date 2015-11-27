@@ -151,6 +151,8 @@ hoặc
 ```bash
 calabash-android run skype.apk -f html -o <filename>.html
 ```
+và đây là file report đã generate ra
+![report](http://i.imgur.com/6FLE3m5.png)
 
 ## Run cụ thể một feature nào đó?
 Đơn giản là bạn chỉ cần dẫn tới file feature đó là được
@@ -183,6 +185,9 @@ Còn tại feature, chúng ta chỉ cần thêm tag @reset vào trước Scenari
     Given I press the "Skype Name" button
 ```
 
+## Xem ID, Class của các đối tượng
+Các bạn hãy dùng `uiautomatorviewer` có sẵn trong thư mực `tools` của ANDROID SDK
+![uiautomatorviewer](http://i.imgur.com/PHTeRBP.png)
 
 
 
