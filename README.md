@@ -112,7 +112,7 @@ Feature: Login feature
     Given I press the "Skype Name" button
     Given I enter "viet.ch2612" into input field number 1
     Given I enter my secret password into input fiend number 2
-    When I press image button number 1
+    When I press image view with id "sign_in_btn"
     Then I should see "Add friend"
 ```
 
@@ -139,8 +139,9 @@ end
 
 Và bây giờ chúng ta run test lại lần nữa:
 
-`kết quả`
+![result](http://i.imgur.com/VAiEZP2.png)
 
+Tất cả đều passed.
 ## Test report?
 Các bạn sẽ tự hỏi, tất cả thông báo các steps pass và fail đều hiện lên trên command line như vậy thì lưu lại report kiểu gì phải không? Tất nhiên là Calabash có hỗ trợ lưu report dưới dạng file, và cụ thể là HTML và report cũng rất là "cool". 
 ```bash
@@ -150,6 +151,8 @@ hoặc
 ```bash
 calabash-android run skype.apk -f html -o <filename>.html
 ```
+và đây là file report đã generate ra
+![report](http://i.imgur.com/6FLE3m5.png)
 
 ## Run cụ thể một feature nào đó?
 Đơn giản là bạn chỉ cần dẫn tới file feature đó là được
@@ -182,6 +185,9 @@ Còn tại feature, chúng ta chỉ cần thêm tag @reset vào trước Scenari
     Given I press the "Skype Name" button
 ```
 
+## Xem ID, Class của các đối tượng
+Các bạn hãy dùng `uiautomatorviewer` có sẵn trong thư mực `tools` của ANDROID SDK
+![uiautomatorviewer](http://i.imgur.com/PHTeRBP.png)
 
 
 
