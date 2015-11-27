@@ -112,10 +112,7 @@ Feature: Login feature
     Given I press the "Skype Name" button
     Given I enter "viet.ch2612" into input field number 1
     Given I enter my secret password into input fiend number 2
-    # Tại màn hình này sẽ có 2 image button
-    # Image button thứ nhất button back
-    # Image button thứ 2 sẽ là button Login
-    When I press image button number 2
+    When I press image view with id "sign_in_btn"
     Then I should see "Add friend"
 ```
 
