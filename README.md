@@ -139,8 +139,9 @@ end
 
 Và bây giờ chúng ta run test lại lần nữa:
 
-`kết quả`
+![result](http://i.imgur.com/VAiEZP2.png)
 
+Tất cả đều passed.
 ## Test report?
 Các bạn sẽ tự hỏi, tất cả thông báo các steps pass và fail đều hiện lên trên command line như vậy thì lưu lại report kiểu gì phải không? Tất nhiên là Calabash có hỗ trợ lưu report dưới dạng file, và cụ thể là HTML và report cũng rất là "cool". 
 ```bash
