@@ -132,7 +132,7 @@ Hãy xem devices và kết quả
 Ồ, bước 1,2 chúng ta đã chạy OK nhưng tới bước 3 thì calabash báo là chúng ta chưa định nghĩa step này. OK giờ chúng ta sẽ định nghĩa nó. Trong folder test, chúng ta hãy mở file `calabash_steps.rb` trong folder `step_definitions` và thêm hàm như sau để định nghĩa step trên
 
 ```ruby
-Given(/^I enter my secret password into input fiend number (\d+)$/) do |arg1|
+Given(/^I enter my secret password into input fiend number (\d+)$/) do |index|
   enter_text("android.widget.EditText index:#{index.to_i-1}", "password")
 end
 ```
@@ -154,7 +154,7 @@ calabash-android run skype.apk -f html -o <filename>.html
 ## Run cụ thể một feature nào đó?
 Đơn giản là bạn chỉ cần dẫn tới file feature đó là được
 ```bash
-calabash-android run skype.apk feature/<filename>/html
+calabash-android run skype.apk feature/<filename>.feature
 ```
 
 ## Run cụ thể một @tag nào đó?
