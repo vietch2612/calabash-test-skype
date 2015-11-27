@@ -186,8 +186,10 @@ Còn tại feature, chúng ta chỉ cần thêm tag @reset vào trước Scenari
 ```
 
 ## Xem ID, Class của các đối tượng
-Các bạn hãy dùng `uiautomatorviewer` có sẵn trong thư mực `tools` của ANDROID SDK
+Các bạn hãy dùng `uiautomatorviewer` có sẵn trong thư mực `tools` của `ANDROID SDK`
 ![uiautomatorviewer](http://i.imgur.com/PHTeRBP.png)
 
+## Kết
+Các bạn có thể clone repo này về rồi thực hành nhé
 
 
