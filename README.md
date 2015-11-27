@@ -36,6 +36,12 @@ rbenv global 2.2.3
 ruby -v
 ```
 
+Nếu kiểm tra `ruby -v` không đúng với version 2.2.3 thì các bạn hãy paste những đoạn sau vào cuối file `~/.bash_profile`
+```
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+```
+
 ## Cài đặt gem calabash-android.
 Sau khi đã cài đặt xong Ruby thì chúng ta cần cài đặt gem Calabash-Android
 ```
