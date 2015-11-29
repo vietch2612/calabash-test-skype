@@ -189,6 +189,12 @@ Còn tại feature, chúng ta chỉ cần thêm tag @reset vào trước Scenari
 Các bạn hãy dùng `uiautomatorviewer` có sẵn trong thư mực `tools` của `ANDROID SDK`
 ![uiautomatorviewer](http://i.imgur.com/PHTeRBP.png)
 
+## Debugging, test các steps của bạn
+```bash
+calabash-android console skype.apk
+```
+Tại đây các bạn có thể nhập các hàm của mình vào để test và xem kết quả trên device
+
 ## Kết
 Các bạn có thể clone repo này về rồi thực hành nhé
 
