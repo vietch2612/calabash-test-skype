@@ -43,6 +43,10 @@ Nếu kiểm tra `ruby -v` không đúng với version 2.2.3 thì các bạn hã
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 ```
+Khởi động lại Terminal hoặc run dòng command
+```bash
+source ~/.bash_profile
+```
 
 ## Cài đặt gem calabash-android.
 Sau khi đã cài đặt xong Ruby thì chúng ta cần cài đặt gem Calabash-Android
@@ -169,7 +173,8 @@ hoặc
 calabash-android run skype.apk -t @test
 ```
 
-## Reset (Clear app data) với tag @reset
+## Clear app data
+### Cách 1: Dùng tag `@reset`
 Các bạn chỉ cần thêm đoạn code sau vào file `feature/support/app_installation_hooks.rb` bên trong `Before`
 ```ruby
 scenario_tags = scenario.source_tag_names
@@ -184,6 +189,18 @@ Còn tại feature, chúng ta chỉ cần thêm tag @reset vào trước Scenari
   Scenario: As a valid user I can log into my app
     Given I press the "Skype Name" button
 ```
+### Cách 2: Define 1 step để clear app data
+Trong file sử dụng define step thì trước tiên chúng ta phải `require app_installation` trước
+```ruby
+require 'calabash-android/management/app_installation'
+```
+rồi define step
+```ruby
+Given /^I clear app data$/ do
+  clear_app_data
+end
+```
+Note: Khi dử dụng step dạng này thì bạn nên có thêm thời gian đợi nhé
 
 ## Xem ID, Class của các đối tượng
 Các bạn hãy dùng `uiautomatorviewer` có sẵn trong thư mực `tools` của `ANDROID SDK`
