@@ -12,8 +12,10 @@ export ANDROID_HOME=/path/to/your/android/sdk/folder
   
 Và cài đặt `PATH`:
 ```bash
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 ```
+Và sau đó nhớ add 3 dòng command trên vào `~/.bash_profile`
 
 ## Cài đặt Ruby.  
 Đầu tiên là máy Mac của bạn phải có `Homebrew`, nếu chưa có thì bạn phải cài đặt trước khi cài đặt Ruby.  
