@@ -4,6 +4,9 @@
 - ANDROID SDK
 - RUBY  
 
+## Cài đặt Java JDK
+Các bạn tải và cài đặt tại đây: [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  
+
 ## Cài đặt Android SDK. 
 Tải và cài đặt Android SDK dành cho Mac OS tại [Android SDK Stand alone download](http://developer.android.com/sdk/index.html#Other)
     ![android_sdk_for_macos](http://i.imgur.com/sm5eCyE.png)  
