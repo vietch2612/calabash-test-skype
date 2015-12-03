@@ -1,4 +1,9 @@
 # Automation Test cho Android app sử dụng Calabash-Cucumber
+### Yêu cầu
+- JAVA JDK
+- ANDROID SDK
+- RUBY  
+
 ## Cài đặt Android SDK. 
 Tải và cài đặt Android SDK dành cho Mac OS tại [Android SDK Stand alone download](http://developer.android.com/sdk/index.html#Other)
     ![android_sdk_for_macos](http://i.imgur.com/sm5eCyE.png)  
@@ -15,7 +20,11 @@ Và cài đặt `PATH`:
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 ```
-Và sau đó nhớ add 3 dòng command trên vào `~/.bash_profile`
+Và sau đó nhớ add 3 dòng command trên vào `~/.bash_profile` hoặc `~/.zshrc` nếu như dùng `zsh`
+Khởi động lại Terminal hoặc run dòng command
+```bash
+source ~/.bash_profile
+```
 
 ## Cài đặt Ruby.  
 Đầu tiên là máy Mac của bạn phải có `Homebrew`, nếu chưa có thì bạn phải cài đặt trước khi cài đặt Ruby.  
