@@ -65,7 +65,7 @@ source ~/.bash_profile
 ## Cài đặt gem calabash-android.
 Sau khi đã cài đặt xong Ruby thì chúng ta cần cài đặt gem Calabash-Android
 ```bash
-gem install calabash-cucumber
+gem install calabash-android
 ```
 
 ## Khởi tạo thư mục test
