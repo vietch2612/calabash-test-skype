@@ -40,10 +40,6 @@ Tiếp theo là cài đặt Ruby, các bạn hãy làm theo các bước như b�
 ```bash
 brew install rbenv ruby-build
 
-# Bước này để rbenv được load mỗi khi bạn mở terminal
-echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
-source ~/.bash_profile
-
 # Cài đặt ruby
 rbenv install 2.2.3
 rbenv global 2.2.3
@@ -69,7 +65,7 @@ gem install calabash-android
 ```
 
 ## Khởi tạo thư mục test
-Cáo thứ các bạn cần chuẩn bị là:  
+Các thứ các bạn cần chuẩn bị là:  
 * Device android hoặc Emulator  
 * File APK của app bạn muốn test.  
 * Sublime Text hoặc bất kì một công cụ Texit Editor nào đó.  
@@ -78,7 +74,7 @@ Trong bài này mình sẽ sử dụng là app Skype
 
 Bây giờ bắt đầu tạo 1 folder mới
 ```bash
-mkdir calabsah-test-skype
+mkdir calabash-test-skype
 ```
 
 Mở folder vừa tạo
